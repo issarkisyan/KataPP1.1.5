@@ -13,11 +13,9 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     //UserDao result = new UserDaoJDBCImpl();
-    UserDao result = new UserDaoHibernateImpl();
+    //Закрыл поле приватом
+    private UserDao result = new UserDaoHibernateImpl();
 
-    public UserServiceImpl() throws SQLException {
-
-    }
 
     public void createUsersTable() throws SQLException {
         result.createUsersTable();
